@@ -42,8 +42,8 @@ export function Confirm({ msg, onYes, onNo }) {
     <Modal title="Confirmation" onClose={onNo}>
       <p style={{ fontSize: 14, color: C.text, marginBottom: 20 }}>{msg}</p>
       <div style={{ display: "flex", gap: 10, justifyContent: "flex-end" }}>
-        <button style={S.btn(C.btnBeige, C.text)} onClick={onNo}>Annuler</button>
-        <button style={S.btn(C.btnRed)}            onClick={onYes}>Supprimer</button>
+        <button style={S.btn(C.btnBeige, C.text)} onClick={onNo}>Cancel</button>
+        <button style={S.btn(C.btnRed)}            onClick={onYes}>Delete</button>
       </div>
     </Modal>
   );

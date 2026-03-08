@@ -56,7 +56,7 @@ export default function Employees({ employees, setEmployees }) {
             <div style={{ fontSize: 11, color: C.textFaint }}>{fmtDate(emp.startDate)}</div>
             <Badge label={emp.status} color={emp.status === "Active" ? "#5A8A6A" : "#8A7A4A"} />
             <div style={S.row}>
-              <button style={{ ...S.btn(C.btnGreenL), padding: "4px 9px", fontSize: 11 }} onClick={() => { setF({ ...emp }); setModal(emp.id); }}>✏️</button>
+              <button style={{ ...S.btn(C.btnGreenL), padding: "4px 9px", fontSize: 11, marginLeft: 9 }} onClick={() => { setF({ ...emp }); setModal(emp.id);  }}>✏️</button>
               <button style={{ ...S.btn(C.btnRed),    padding: "4px 9px", fontSize: 11 }} onClick={() => setConfirm(emp.id)}>🗑</button>
             </div>
           </div>

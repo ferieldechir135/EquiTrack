@@ -38,7 +38,7 @@ export default function Dashboard({ horses, riders, events, inventory, transacti
         {/* Upcoming events */}
         <div style={{ backgroundColor: C.cardGreen, borderRadius: 12, padding: 20, color: "#fff" }}>
           <div style={{ fontSize: 10, letterSpacing: 2, textTransform: "uppercase", opacity: 0.65, marginBottom: 14 }}>
-            Prochains événements
+            Upcoming Events
           </div>
           {upcoming.length === 0 ? (
             <div style={{ fontSize: 12, opacity: 0.4 }}>Aucun</div>
@@ -58,9 +58,9 @@ export default function Dashboard({ horses, riders, events, inventory, transacti
         {/* Finances */}
         <div style={{ backgroundColor: C.card, borderRadius: 12, padding: 20 }}>
           <div style={{ fontSize: 10, letterSpacing: 2, textTransform: "uppercase", color: C.textFaint, marginBottom: 14 }}>
-            Finances (ce mois)
+            Finances (this month)
           </div>
-          {[["Revenus", income, "#5A8A6A"], ["Dépenses", expense, C.btnRed], ["Solde", income - expense, income - expense >= 0 ? "#5A8A6A" : C.btnRed]].map(([l, v, c]) => (
+          {[["Income", income, "#5A8A6A"], ["Expenses", expense, C.btnRed], ["Balance", income - expense, income - expense >= 0 ? "#5A8A6A" : C.btnRed]].map(([l, v, c]) => (
             <div key={l} style={{ display: "flex", justifyContent: "space-between", marginBottom: 10 }}>
               <span style={{ fontSize: 13, color: C.text }}>{l}</span>
               <span style={{ fontWeight: "bold", color: c }}>{fmtMoney(v)}</span>
@@ -71,7 +71,7 @@ export default function Dashboard({ horses, riders, events, inventory, transacti
         {/* Horse states */}
         <div style={{ backgroundColor: C.card, borderRadius: 12, padding: 20 }}>
           <div style={{ fontSize: 10, letterSpacing: 2, textTransform: "uppercase", color: C.textFaint, marginBottom: 14 }}>
-            État des chevaux
+            Horses Condition
           </div>
           {horses.slice(0, 6).map((h) => (
             <div

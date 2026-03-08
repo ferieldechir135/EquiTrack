@@ -25,6 +25,6 @@ export const evtColor = (t) =>
     : "#5A5A7A";
 
 export const MONTHS = [
-  "Janvier","Février","Mars","Avril","Mai","Juin",
-  "Juillet","Août","Septembre","Octobre","Novembre","Décembre",
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
 ];
