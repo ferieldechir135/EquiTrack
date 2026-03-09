@@ -8,6 +8,9 @@ app.use(cors());
 app.use(express.json());
 
 // ─── Routes ──────────────────────────────────────────────────
+const { router: authRouter } = require("./routes/auth");
+app.use("/api/auth",         authRouter);
+
 app.use("/api/horses",       require("./routes/horses"));
 app.use("/api/riders",       require("./routes/riders"));
 app.use("/api/events",       require("./routes/events"));
