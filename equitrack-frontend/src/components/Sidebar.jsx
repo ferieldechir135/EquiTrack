@@ -6,7 +6,7 @@ const NAV = [
   { section: "SYSTEM",     items: ["Settings"] },
 ];
 
-export default function Sidebar({ active, setActive, orgName }) {
+export default function Sidebar({ active, setActive, orgName, onLogout }) {
   const initials = orgName
     .split(" ")
     .map((w) => w[0])
@@ -81,24 +81,43 @@ export default function Sidebar({ active, setActive, orgName }) {
         style={{
           padding: "14px 18px",
           borderTop: "1px solid rgba(201,168,76,.2)",
-          display: "flex", alignItems: "center", gap: 10,
         }}
       >
-        <div
-          style={{
-            width: 32, height: 32, borderRadius: "50%",
-            backgroundColor: C.gold,
-            display: "flex", alignItems: "center", justifyContent: "center",
-            fontSize: 10, fontWeight: "bold", color: C.sidebar, flexShrink: 0,
-          }}
-        >
-          {initials}
-        </div>
-        <div style={{ overflow: "hidden" }}>
-          <div style={{ color: C.gold, fontSize: 8, letterSpacing: 2, textTransform: "uppercase", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-            {orgName}
+        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
+          <div
+            style={{
+              width: 32, height: 32, borderRadius: "50%",
+              backgroundColor: C.gold,
+              display: "flex", alignItems: "center", justifyContent: "center",
+              fontSize: 10, fontWeight: "bold", color: C.sidebar, flexShrink: 0,
+            }}
+          >
+            {initials}
           </div>
-          <div style={{ color: "rgba(245,240,224,.5)", fontSize: 8, letterSpacing: 2, textTransform: "uppercase" }}>ADMIN</div>
+          <div style={{ overflow: "hidden" }}>
+            <div style={{ color: C.gold, fontSize: 8, letterSpacing: 2, textTransform: "uppercase", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+              {orgName}
+            </div>
+            <div style={{ color: "rgba(245,240,224,.5)", fontSize: 8, letterSpacing: 2, textTransform: "uppercase" }}>ADMIN</div>
+          </div>
+        </div>
+
+        <div
+          onClick={onLogout}
+          style={{
+            display: "flex", alignItems: "center", gap: 8,
+            padding: "8px 12px", borderRadius: 8, cursor: "pointer",
+            backgroundColor: "rgba(176,90,42,0.12)",
+            border: "1px solid rgba(176,90,42,0.25)",
+            transition: "all 0.2s",
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "rgba(176,90,42,0.25)"}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "rgba(176,90,42,0.12)"}
+        >
+          <span style={{ fontSize: 13 }}>🚪</span>
+          <span style={{ color: "rgba(245,240,224,0.65)", fontSize: 10, letterSpacing: 2, textTransform: "uppercase" }}>
+            Se déconnecter
+          </span>
         </div>
       </div>
     </div>

@@ -164,7 +164,6 @@ export default function Auth({ onLogin }) {
           fontFamily: "'Georgia', serif",
         }}
       >
-        {/* ══ LEFT — green panel ══ */}
         <div
           style={{
             width: "44%",
@@ -178,7 +177,6 @@ export default function Auth({ onLogin }) {
             animation: mounted ? "fadeInLeft 0.65s ease both" : "none",
           }}
         >
-          {/* decorative rings */}
           <Deco size={380} x={-18} y={-12} opacity={0.05} delay={0} />
           <Deco size={240} x={-8} y={-4} opacity={0.09} delay={1.2} />
           <Deco size={300} x={68} y={68} opacity={0.05} delay={0.6} />
@@ -186,7 +184,6 @@ export default function Auth({ onLogin }) {
           <Deco size={120} x={55} y={-6} opacity={0.07} delay={1.8} />
           <Deco size={90} x={8} y={82} opacity={0.08} delay={3.2} />
 
-          {/* right border gold gradient */}
           <div
             style={{
               position: "absolute",
@@ -199,7 +196,6 @@ export default function Auth({ onLogin }) {
             }}
           />
 
-          {/* main content */}
           <div
             style={{
               zIndex: 1,
@@ -208,7 +204,6 @@ export default function Auth({ onLogin }) {
               maxWidth: 360,
             }}
           >
-            {/* horse icon circle */}
             <div
               style={{
                 width: 82,
@@ -232,7 +227,6 @@ export default function Auth({ onLogin }) {
               />
             </div>
 
-            {/* brand name */}
             <div
               style={{
                 fontFamily: "'Cormorant Garamond', 'Georgia', serif",
@@ -263,7 +257,6 @@ export default function Auth({ onLogin }) {
               Stable Management
             </div>
 
-            {/* divider */}
             <div
               style={{
                 width: 44,
@@ -275,7 +268,6 @@ export default function Auth({ onLogin }) {
               }}
             />
 
-            {/* feature list */}
             {[
               ["🐎", "Horse Management"],
               ["📅", "Schedule & Events"],
@@ -322,7 +314,6 @@ export default function Auth({ onLogin }) {
             ))}
           </div>
 
-          {/* footer */}
           <div
             style={{
               position: "absolute",
@@ -337,7 +328,6 @@ export default function Auth({ onLogin }) {
           </div>
         </div>
 
-        {/* ══ RIGHT — beige form panel ══ */}
         <div
           style={{
             flex: 1,
@@ -350,7 +340,6 @@ export default function Auth({ onLogin }) {
           }}
         >
           <div style={{ width: "100%", maxWidth: 390 }}>
-            {/* heading */}
             <div style={{ marginBottom: 32 }}>
               <div
                 style={{
@@ -371,7 +360,6 @@ export default function Auth({ onLogin }) {
               </div>
             </div>
 
-            {/* tab toggle */}
             <div
               style={{
                 display: "flex",
@@ -415,7 +403,6 @@ export default function Auth({ onLogin }) {
               ))}
             </div>
 
-            {/* email */}
             <div style={{ marginBottom: 16 }}>
               <label style={labelStyle}>email adress</label>
               <input
@@ -431,7 +418,6 @@ export default function Auth({ onLogin }) {
               />
             </div>
 
-            {/* password */}
             <div style={{ marginBottom: mode === "register" ? 16 : 24 }}>
               <label style={labelStyle}>Password</label>
               <input
@@ -447,7 +433,6 @@ export default function Auth({ onLogin }) {
               />
             </div>
 
-            {/* confirm password */}
             {mode === "register" && (
               <div style={{ marginBottom: 24 }}>
                 <label style={labelStyle}>Confirm Password</label>
@@ -465,7 +450,6 @@ export default function Auth({ onLogin }) {
               </div>
             )}
 
-            {/* error */}
             {error && (
               <div
                 style={{
@@ -483,7 +467,6 @@ export default function Auth({ onLogin }) {
               </div>
             )}
 
-            {/* submit */}
             <button
               className="auth-submit"
               onClick={handleSubmit}
@@ -512,7 +495,6 @@ export default function Auth({ onLogin }) {
                   : "Create an account."}
             </button>
 
-            {/* switch mode */}
             <div
               style={{
                 textAlign: "center",
@@ -543,7 +525,6 @@ export default function Auth({ onLogin }) {
               </span>
             </div>
 
-            {/* footer note */}
             <div
               style={{
                 marginTop: 40,
